@@ -8,6 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController {
+    IBOutlet UILabel* clockLabel;
+    IBOutlet UITextField *timerLength;
+    NSInteger countDown;
+    NSTimer *myTicker;
+}
+
+@property (nonatomic, retain) NSTimer *myTicker;
+
+- (IBAction)startTimer:(id)sender;
+- (IBAction)stopTimer:(id)sender;
+-(void)showActivity;
 
 @end
