@@ -18,6 +18,7 @@
 		C74662AB1613BB0E00468729 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C74662AA1613BB0E00468729 /* Default-568h@2x.png */; };
 		C74662AE1613BB0E00468729 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C74662AC1613BB0E00468729 /* MainStoryboard.storyboard */; };
 		C74662B11613BB0E00468729 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C74662B01613BB0E00468729 /* ViewController.m */; };
+		C74662B81613BBC400468729 /* background_image.png in Resources */ = {isa = PBXBuildFile; fileRef = C74662B71613BBC400468729 /* background_image.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		C74662AD1613BB0E00468729 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		C74662AF1613BB0E00468729 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		C74662B01613BB0E00468729 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C74662B71613BBC400468729 /* background_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_image.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 		C746629B1613BB0E00468729 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C74662B71613BBC400468729 /* background_image.png */,
 				C746629C1613BB0E00468729 /* CountdownTimer-Info.plist */,
 				C746629D1613BB0E00468729 /* InfoPlist.strings */,
 				C74662A01613BB0E00468729 /* main.m */,
@@ -163,6 +166,7 @@
 				C74662A91613BB0E00468729 /* Default@2x.png in Resources */,
 				C74662AB1613BB0E00468729 /* Default-568h@2x.png in Resources */,
 				C74662AE1613BB0E00468729 /* MainStoryboard.storyboard in Resources */,
+				C74662B81613BBC400468729 /* background_image.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
