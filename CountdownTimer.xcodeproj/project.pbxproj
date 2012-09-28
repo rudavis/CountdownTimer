@@ -295,6 +295,7 @@
 				C74662B61613BB0E00468729 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
