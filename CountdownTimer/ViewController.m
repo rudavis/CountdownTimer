@@ -14,12 +14,15 @@
 
 @implementation ViewController
 
-@synthesize myTicker;
+@synthesize clockLabel;
+
 
 - (IBAction)startTimer:(id)sender {
-    countDown = [timerLength.text integerValue];
+    durationInSec = [timerLength.text integerValue] * 60;
     
-    myTicker = [NSTimer scheduledTimerWithTimeInterval: 1.0
+    //countDown = [timerLength.text integerValue];
+    
+    myTicker = [NSTimer scheduledTimerWithTimeInterval: 0.1
                                                 target: self
                                               selector: @selector(showActivity)
                                               userInfo: nil
@@ -27,20 +30,39 @@
 }
 
 - (IBAction)stopTimer:(id)sender {
-    [self.myTicker invalidate];
-    self.myTicker = nil;
+    [myTicker invalidate];
+    myTicker = nil;
+    [self showActivity];
     
 }
 
 -(void)showActivity{
     //NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     //NSDate *date = [NSDate date];
-    
     //[formatter setTimeStyle:NSDateFormatterMediumStyle];
     //[clockLabel setText:[formatter stringFromDate:date]];
-    NSString *counted = [NSString stringWithFormat:@"%d",countDown];
-    clockLabel.text = counted;
-    countDown--;
+    
+    /*
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:[countDown doubleValue];
+                    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+                    [formatter setDateFormat:@"HH:mm:ss"];
+                    NSLog(@"%@", [formatter stringFromDate:date]);
+                    [formatter release];
+    */
+     
+    
+    //NSString *counted = [NSString stringWithFormat:@"%d",countDown];
+    
+    minRemaining = durationInSec / 60;
+    secRemaining = durationInSec % 60;
+    
+    clockLabel.text = [NSString stringWithFormat:@"%02d:%02d",minRemaining, secRemaining];
+    if (durationInSec>0) {
+        durationInSec--;
+    } else {
+        [myTicker invalidate];
+        myTicker = nil;
+    }
     
 }
 
@@ -48,6 +70,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    secRemaining = 0;
+    minRemaining = 0;
     
 }
 
@@ -64,5 +88,6 @@
     // Return YES for supported orientations
     return YES;
 }
+
 
 @end
