@@ -66,6 +66,22 @@
     
 }
 
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    [timerLength becomeFirstResponder];
+    
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+//
+}
+
+- (BOOL)hideKeyboard:(id)sender {
+    [timerLength resignFirstResponder];
+    return YES;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
